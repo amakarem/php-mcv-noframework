@@ -27,7 +27,7 @@ if (isset($get_order['id'])) {
         } else {
             echo "Not Active </p>";
         }
-        echo "<p><b>Details: </b>" . $u['issue'] . "</p?";
+        echo "<p><b>Details: </b>" . $u['task'] . "</p?";
     }
 }
 ?>
