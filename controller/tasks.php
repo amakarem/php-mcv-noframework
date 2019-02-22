@@ -1,6 +1,6 @@
 <?php
 if (!defined('APP_PATH')) die ('No direct script access allowed');
-class Users extends DB {
+class Tasks extends DB {
   function getall(){
     global $get_order;
     if(isset ($get_order['sort'])) {
@@ -14,9 +14,15 @@ class Users extends DB {
     global $get_order;
     if(isset ($get_order['id'])) {
       return $this->select("SELECT * FROM `tasks` where id = ".$get_order['id']);
-    } else {
-      return $this->select("SELECT * FROM `tasks`");
     }
+  }
+
+  function newtask(){
+    $name = $_POST['name'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $task = $_POST['details'];
+      return $this->insert("INSERT INTO `tasks` (`name`, `username`, `email`, `task`) VALUES ('".$name."', '".$username."', '".$email."', '".$task."')");
   }
 }
 ?>

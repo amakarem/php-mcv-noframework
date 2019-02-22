@@ -11,32 +11,38 @@ require "layout/header.php";
 <div class="container mt-3">
 
 <div class="w-50">
-<form action="" method="post">
+
+<?php
+if (!empty($_POST['submit'])) {
+require "../model/database.php";
+require "../controller/tasks.php";
+$tasks = new Tasks();
+$tasks->newtask();
+} else {
+?>
+<form action="newtask" method="post">
 <div class="form-group">
 <label for="name">Name:</label>
-<input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
 </div>
 <div class="form-group">
 <label for="username">Username:</label>
-<input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+<input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
 </div>
 <div class="form-group">
 <label for="email">E-Mail:</label>
-<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+<input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
 </div>
 <div class="form-group">
 <label for="details">Details:</label>
-<textarea name="details" id="details" class="form-control" placeholder="Enter task details" rows="5" cols="40"></textarea><br>
-<input type="submit">
+<textarea name="details" id="details" class="form-control" placeholder="Enter task details" rows="5" cols="40" required></textarea><br>
+<input type="submit" name="submit">
 </div>
 </form>
-</div>
 <?php
-require "../model/database.php";
-require "../controller/tasks.php";
-
+}
 ?>
-
+</div>
 </div>
 
 

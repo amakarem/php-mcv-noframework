@@ -19,8 +19,8 @@ require "layout/header.php";
 require "../model/database.php";
 require "../controller/tasks.php";
 
-$users = new Users();
-foreach ($users->getall() as $u) {
+$tasks = new Tasks();
+foreach ($tasks->getall() as $u) {
     echo "<tr>";
     echo "<td><a href='task?id=" . $u['id'] . "'> " . $u['id'] . "</td>";
     echo "<td>" . $u['name'] . "</td>";

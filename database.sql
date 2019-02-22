@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 22, 2019 at 12:46 PM
+-- Generation Time: Feb 22, 2019 at 02:37 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -30,12 +30,12 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `tasks`;
 CREATE TABLE IF NOT EXISTS `tasks` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
-  `issue` mediumtext NOT NULL,
-  `status` int(11) NOT NULL,
+  `task` mediumtext NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
 -- Dumping data for table `tasks`
 --
 
-INSERT INTO `tasks` (`id`, `name`, `username`, `email`, `issue`, `status`) VALUES
+INSERT INTO `tasks` (`id`, `name`, `username`, `email`, `task`, `status`) VALUES
 (1, 'John Doe', 'johndoe', 'johndoe@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Congue nisi vitae suscipit tellus mauris a. Amet facilisis magna etiam tempor orci eu lobortis elementum. Semper risus in hendrerit gravida. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Ut faucibus pulvinar elementum integer enim. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Et netus et malesuada fames ac turpis egestas maecenas pharetra. Posuere morbi leo urna molestie at.', 0),
 (2, 'Jane Doe', 'janedoe', 'janedoe@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Congue nisi vitae suscipit tellus mauris a. Amet facilisis magna etiam tempor orci eu lobortis elementum. Semper risus in hendrerit gravida. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Ut faucibus pulvinar elementum integer enim. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Et netus et malesuada fames ac turpis egestas maecenas pharetra. Posuere morbi leo urna molestie at.', 0),
 (3, 'Rusty Terry', 'rustyterry', 'rustyterry@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Congue nisi vitae suscipit tellus mauris a. Amet facilisis magna etiam tempor orci eu lobortis elementum. Semper risus in hendrerit gravida. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Ut faucibus pulvinar elementum integer enim. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Et netus et malesuada fames ac turpis egestas maecenas pharetra. Posuere morbi leo urna molestie at.', 0),
