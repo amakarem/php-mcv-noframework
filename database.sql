@@ -99,8 +99,28 @@ INSERT INTO `tasks` (`id`, `name`, `username`, `email`, `task`, `status`) VALUES
 (52, 'Harvey Frame', 'harveyframe', 'harveyframe@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Congue nisi vitae suscipit tellus mauris a. Amet facilisis magna etiam tempor orci eu lobortis elementum. Semper risus in hendrerit gravida. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Ut faucibus pulvinar elementum integer enim. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Et netus et malesuada fames ac turpis egestas maecenas pharetra. Posuere morbi leo urna molestie at.', 0),
 (53, 'Ismaeel Carty', 'ismaeelcarty', 'ismaeelcarty@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Congue nisi vitae suscipit tellus mauris a. Amet facilisis magna etiam tempor orci eu lobortis elementum. Semper risus in hendrerit gravida. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Ut faucibus pulvinar elementum integer enim. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Et netus et malesuada fames ac turpis egestas maecenas pharetra. Posuere morbi leo urna molestie at.', 0),
 (54, 'Rowan Avalos', 'rowanavalos', 'rowanavalos@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Congue nisi vitae suscipit tellus mauris a. Amet facilisis magna etiam tempor orci eu lobortis elementum. Semper risus in hendrerit gravida. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Ut faucibus pulvinar elementum integer enim. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Et netus et malesuada fames ac turpis egestas maecenas pharetra. Posuere morbi leo urna molestie at.', 0);
-COMMIT;
+-- --------------------------------------------------------
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `status`) VALUES
+(1, 'ahmed elaaser', 'admin', 'ahmed.elaaser@outlook.com', 'e99a18c428cb38d5f260853678922e03', 0);
+COMMIT;
