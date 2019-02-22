@@ -26,7 +26,7 @@ foreach ($tasks->getall() as $u) {
     echo "<td>" . $u['name'] . "</td>";
     echo "<td>" . $u['username'] . "</td>";
     echo "<td>" . $u['email'] . "</td>";
-    if($u['status'] = 1) {
+    if($u['status'] == 0) {
         echo "<td> Active </td>";
     } else {
         echo "<td>Not Active </td>";

@@ -17,6 +17,12 @@ if (isset($get_order['id'])) {
     require "../model/database.php";
     require "../controller/tasks.php";
 
+    if (!empty($_POST['submit'])) {
+        $tasks = new Tasks();
+        $tasks->edittask();
+    }
+
+
     $tasks = new Tasks();
     foreach ($tasks->view() as $u) {
 ?>
@@ -34,7 +40,10 @@ if (isset($get_order['id'])) {
             </div>
             <div class="form-group">
                 <label>Status</label>
-                <input type="text" name="status" class="form-control" value="<?php echo $u['status']; ?>">
+                <select name="status">
+                <option value="0" <?php if ($u['status'] == 0) { echo "selected";} ?>>Active</option>
+                <option value="1" <?php if ($u['status'] == 1) { echo "selected";} ?>>Not Active</option>
+                </select>
             </div>
             <div class="form-group">
                 <label>Details</label>

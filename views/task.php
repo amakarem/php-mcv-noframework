@@ -22,7 +22,7 @@ if (isset($get_order['id'])) {
         echo "<p><b>Username: </b>" . $u['username'] . "</p>";
         echo "<p><b>Email: </b>" . $u['email'] . "</p>";
         echo "<p><b>Status: </b>";
-        if ($u['status'] = 1) {
+        if ($u['status'] == 0) {
             echo "Active </p>";
         } else {
             echo "Not Active </p>";

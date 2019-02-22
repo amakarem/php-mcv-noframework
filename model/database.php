@@ -57,4 +57,21 @@ class DB
         $conn = null;
         return $result;
     }
+
+    public function update($sql)
+    {
+        try {
+            $conn = $this->pdo;
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $conn->exec($sql);
+            echo "Record updated successfully";
+            $result = "ok";
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+            $result = "error";
+        }
+
+        $conn = null;
+        return $result;
+    }
 }
