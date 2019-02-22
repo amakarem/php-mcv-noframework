@@ -13,8 +13,13 @@ switch ($request) {
     case '/newtask' :
         require  '../views/newtask.php';
         break;
-    case '/about' :
-        require  '../views/about.php';
+    case '/login' :
+        require  '../views/login.php';
+        break;
+    case '/logout' :
+        session_start();
+        session_destroy();
+        header('Location: ' . 'login'); ;
         break;
     default: 
         require  '../views/404.php';

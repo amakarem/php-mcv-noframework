@@ -22,8 +22,15 @@
       <li><a href="newtask">New Task</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <?php 
+    session_start();
+    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+      echo '<li><a href="logout"><span class="glyphicon glyphicon-user"></span> logout</a></li>';
+    } else {
+      echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
+      echo '<li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+    }
+    ?>
     </ul>
   </div>
 </nav>
