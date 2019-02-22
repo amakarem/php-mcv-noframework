@@ -1,5 +1,5 @@
-# PHP-MCV-noframework
-PHP MCV without using any framework
+# PHP-MVC-noframework
+PHP MVC without using any framework
 
 ## Installation
 
