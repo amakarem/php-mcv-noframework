@@ -3,6 +3,6 @@
 }
 ?>
 <hr>
-<h3>Copyright: Ahmed Elaaser </h3>
+<h3 class="text-center">Copyright: Ahmed Elaaser </h3>
 </body>
 </html>
