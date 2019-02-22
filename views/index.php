@@ -3,8 +3,10 @@ if (!defined('APP_PATH')) die ('No direct script access allowed');
 $page_title = "Main Page";
 require "layout/header.php";
 ?>
-<h2><a href="users">retrieve data from DB Example</a></h2>
-
+<div class="container">
+<h3><a href="tasks">View all tasks</a></h3>
+<h3><a href="newtask">Open New tasks</a></h3>
+</div>
 <?php
 require "layout/footer.php";
 ?>

@@ -1,12 +1,12 @@
 <?php
 if (!defined('APP_PATH')) die ('No direct script access allowed');
-$page_title = "Users List";
+$page_title = "Tasks List";
 require "layout/header.php";
 ?>
 
 
-<div class="contaner">
-<table width="100%">
+<div class="container">
+<table class="table table-hover">
 <tr>
 <th><a href="tasks?sort=id">ID</a></th>
 <th><a href="tasks?sort=name">Name</a></th>

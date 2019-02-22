@@ -1,11 +1,11 @@
 <?php
 if (!defined('APP_PATH')) die ('No direct script access allowed');
-$page_title = "Users List";
+$page_title = "View Task";
 require "layout/header.php";
 ?>
 
 
-<div class="contaner">
+<div class="container">
 
 <?php
 require "../model/database.php";
