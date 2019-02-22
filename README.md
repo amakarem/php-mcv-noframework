@@ -16,5 +16,5 @@ Installation
 2. Clone this repository and checkout needed branch;
 3. Create a dedicated clean MySQL (or compatible) database;
 4. Update config.php file with DB information and site_title;
-5. import users.sql file to the database if you wanna use the dumb data
+5. import database.sql file to the database if you wanna use the dumb data
 6. Check if everything's up by visiting your page in the web browser, and you are done!
