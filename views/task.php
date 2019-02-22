@@ -27,7 +27,10 @@ if (isset($get_order['id'])) {
         } else {
             echo "Not Active </p>";
         }
-        echo "<p><b>Details: </b>" . $u['task'] . "</p?";
+        echo "<p><b>Details: </b>" . $u['task'] . "</p>";
+        if($loggedin == true) {
+            echo '<a class="btn btn-primary" href="edittask?id='.$u['id'].'" role="button">Edit</a>';
+        }
     }
 }
 ?>

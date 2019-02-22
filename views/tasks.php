@@ -31,8 +31,11 @@ foreach ($tasks->getall() as $u) {
     } else {
         echo "<td>Not Active </td>";
     }
-    echo "<td><a href='task?id=" . $u['id'] . "'> View </td>";
-    echo "</tr>";
+    echo "<td><a class='btn btn-primary' href='task?id=" . $u['id'] . "'> View </a>";
+    if($loggedin == true) {
+        echo " <a class='btn btn-primary' href='edittask?id=".$u['id']."' role='button'>Edit</a>";
+    }
+    echo "</td></tr>";
 }
 ?>
 </table>

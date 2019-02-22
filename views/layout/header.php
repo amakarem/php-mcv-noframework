@@ -23,8 +23,10 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <?php 
+    $loggedin = false;
     session_start();
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+      $loggedin = true;
       echo '<li><a href="logout"><span class="glyphicon glyphicon-user"></span> logout</a></li>';
     } else {
       echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';

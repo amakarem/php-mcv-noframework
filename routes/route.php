@@ -10,6 +10,9 @@ switch ($request) {
     case '/task' :
         require  '../views/task.php';
         break;
+    case '/edittask' :
+        require  '../views/edittask.php';
+        break;
     case '/newtask' :
         require  '../views/newtask.php';
         break;
