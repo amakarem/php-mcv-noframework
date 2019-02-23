@@ -47,15 +47,12 @@ class DB
             $conn = $this->pdo;
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $conn->exec($sql);
-            echo "New record created successfully";
-            $result = "ok";
+            echo '<div class="alert alert-success"><strong>Success!</strong> New Task created successfully.</div>';
         } catch (PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
-            $result = "error";
+            echo "<div class='alert alert-danger'><strong>ERROR: </strong>" . $sql . "<br>" . $e->getMessage() ."</div>";
         }
 
         $conn = null;
-        return $result;
     }
 
     public function update($sql)
@@ -64,14 +61,11 @@ class DB
             $conn = $this->pdo;
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $conn->exec($sql);
-            echo "Record updated successfully";
-            $result = "ok";
+            echo '<div class="alert alert-success"><strong>Success!</strong> Task updated successfully.</div>';
         } catch (PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
-            $result = "error";
+            echo "<div class='alert alert-danger'><strong>ERROR: </strong>" . $sql . "<br>" . $e->getMessage() ."</div>";
         }
 
         $conn = null;
-        return $result;
     }
 }

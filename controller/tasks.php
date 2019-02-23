@@ -29,7 +29,11 @@ class Tasks extends DB
         $username = $_POST['username'];
         $email = $_POST['email'];
         $task = $_POST['details'];
-        return $this->insert("INSERT INTO `tasks` (`name`, `username`, `email`, `task`) VALUES ('" . $name . "', '" . $username . "', '" . $email . "', '" . $task . "')");
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return $this->insert("INSERT INTO `tasks` (`name`, `username`, `email`, `task`) VALUES ('" . $name . "', '" . $username . "', '" . $email . "', '" . $task . "')");
+        } else {
+            echo ("<div class='alert alert-danger'><strong>ERROR: </strong>$email is not a valid email address</div>");
+        }
     }
 
     public function edittask()
@@ -42,7 +46,11 @@ class Tasks extends DB
             $email = $_POST['email'];
             $task = $_POST['details'];
             $status = $_POST['status'];
-            return $this->update("update `tasks` set name ='" . $name . "', username = '" . $username . "', email ='" . $email . "', task = '" . $task . "', status = '" . $status . "' where id='".$id."'");
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return $this->update("update `tasks` set name ='" . $name . "', username = '" . $username . "', email ='" . $email . "', task = '" . $task . "', status = '" . $status . "' where id='" . $id . "'");
+            } else {
+                echo ("<div class='alert alert-danger'><strong>ERROR: </strong>$email is not a valid email address</div>");
+            }
         }
     }
 }

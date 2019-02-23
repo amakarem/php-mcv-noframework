@@ -18,7 +18,7 @@ require "../model/database.php";
 require "../controller/tasks.php";
 $tasks = new Tasks();
 $tasks->newtask();
-} else {
+} 
 ?>
 <form action="newtask" method="post">
 <div class="form-group">
@@ -39,9 +39,6 @@ $tasks->newtask();
 <input type="submit" name="submit">
 </div>
 </form>
-<?php
-}
-?>
 </div>
 </div>
 
