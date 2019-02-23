@@ -9,7 +9,7 @@ require "layout/header.php";
 <table class="table table-hover">
 <thead class="bg-info">
 <tr>
-<th>ID <a href="tasks?sort=id">&#8681;</a><a href="tasks?sort=id&desc=1">&#8679;</a></th>
+<th>ID<a href="tasks?sort=id">&#8681;</a><a href="tasks?sort=id&desc=1">&#8679;</a></th>
 <th>Name<a href="tasks?sort=name">&#8681;</a><a href="tasks?sort=name&desc=1">&#8679;</a></th>
 <th>Username<a href="tasks?sort=username">&#8681;</a><a href="tasks?sort=username&desc=1">&#8679;</a></th>
 <th>Email<a href="tasks?sort=email">&#8681;</a><a href="tasks?sort=email&desc=1">&#8679;</a></th>
