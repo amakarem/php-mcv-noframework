@@ -28,15 +28,15 @@ if (isset($get_order['id'])) {
 ?>
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" name="name" class="form-control" value="<?php echo $u['name']; ?>">
+                <input type="text" name="name" class="form-control" value="<?php echo $u['name']; ?>" required>
             </div>
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username" class="form-control" value="<?php echo $u['username']; ?>">
+                <input type="text" name="username" class="form-control" value="<?php echo $u['username']; ?>" required>
             </div>
             <div class="form-group">
                 <label>email</label>
-                <input type="text" name="email" class="form-control" value="<?php echo $u['email']; ?>">
+                <input type="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" class="form-control" value="<?php echo $u['email']; ?>" required>
             </div>
             <div class="form-group">
                 <label>Status</label>

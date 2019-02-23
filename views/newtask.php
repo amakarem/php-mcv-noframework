@@ -31,7 +31,7 @@ $tasks->newtask();
 </div>
 <div class="form-group">
 <label for="email">E-Mail:</label>
-<input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
+<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="email" placeholder="Enter email" name="email" required>
 </div>
 <div class="form-group">
 <label for="details">Details:</label>
