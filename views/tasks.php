@@ -43,6 +43,12 @@ foreach ($tasks->getall() as $u) {
 ?>
 </tbody>
 </table>
+<div class="text-center">
+<?php
+$pages = new Tasks();
+$pages->pages();
+?>
+</div>
 </div>
 
 
