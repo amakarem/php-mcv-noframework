@@ -36,7 +36,7 @@ $tasks->newtask();
 <div class="form-group">
 <label for="details">Details:</label>
 <textarea name="details" id="details" class="form-control" placeholder="Enter task details" rows="5" cols="40" required></textarea><br>
-<input type="submit" name="submit">
+<input type="submit" name="submit" class="btn btn-primary">
 </div>
 </form>
 </div>
