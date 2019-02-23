@@ -9,7 +9,11 @@ class Tasks extends DB
     {
         global $get_order;
         if (isset($get_order['sort'])) {
-            return $this->select("SELECT * FROM `tasks` order by " . $get_order['sort']);
+            $sortoption = "ASC";
+            if (isset($get_order['desc'])) {
+                $sortoption = "DESC";
+            }
+            return $this->select("SELECT * FROM `tasks` order by " . $get_order['sort'] . " " . $sortoption);
         } else {
             return $this->select("SELECT * FROM `tasks`");
         }

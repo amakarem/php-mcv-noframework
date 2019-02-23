@@ -8,11 +8,11 @@ require "layout/header.php";
 <div class="container">
 <table class="table table-hover">
 <tr>
-<th><a href="tasks?sort=id">ID</a></th>
-<th><a href="tasks?sort=name">Name</a></th>
-<th><a href="tasks?sort=username">Username</a></th>
-<th><a href="tasks?sort=email">Email</a></th>
-<th><a href="tasks?sort=status">Status</a></th>
+<th>ID <a href="tasks?sort=id">&#8681;</a><a href="tasks?sort=id&desc=1">&#8679;</a></th>
+<th>Name<a href="tasks?sort=name">&#8681;</a><a href="tasks?sort=name&desc=1">&#8679;</a></th>
+<th>Username<a href="tasks?sort=username">&#8681;</a><a href="tasks?sort=username&desc=1">&#8679;</a></th>
+<th>Email<a href="tasks?sort=email">&#8681;</a><a href="tasks?sort=email&desc=1">&#8679;</a></th>
+<th>Status<a href="tasks?sort=status">&#8681;</a><a href="tasks?sort=status&desc=1">&#8679;</a></th>
 <th>View</th>
 </tr>
 <?php
